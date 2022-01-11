@@ -1,0 +1,89 @@
+body {
+    background-image: url(../imagesfolder/background.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+.div {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+p {
+    color: #02F78E;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+#object {
+    padding: 0%;
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 20px;
+    border: black solid 1px;
+    border-radius: 8px;
+    width: 500px;
+    background-color: #0080FF;
+    text-align: justify;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+img {
+    margin: 10px 20px 0px 10px;
+    display: inline-block !important;
+}
+
+.middle {
+    margin: 0px 200px;
+}
+
+#list,
+#chose {
+    float: left;
+}
+
+.colorgrades {
+    background-color: #AE57A4;
+    margin-bottom: 200px;
+    text-align: center !important;
+    font-size: 50px;
+    display: none;
+}
+
+.grades {
+    padding: 0%;
+    list-style-type: none;
+    width: 100%;
+    margin-top: 175px;
+}
+
+#alert{
+    position: absolute;
+    top: 400px;
+    right: 500px;
+    width: 60%;
+    height: 10%;
+    font-size: 30px;
+    display: none;
+}
+
+.rule{
+    margin: 0;
+    padding: 0;
+    line-height: 3em;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+    color: #000000;
+    background: #f2e7ca url(images/templatemo_body.jpg) top center no-repeat;
+}

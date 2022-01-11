@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(../imagesfolder/rank.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+td{
+    color: white;
+}
+
+th{
+    color: white;
+}
