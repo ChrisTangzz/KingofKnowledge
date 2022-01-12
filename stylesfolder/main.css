@@ -91,3 +91,7 @@ img {
 html { 
     zoom: .8; 
 }
+
+.modal-backdrop{
+    zoom: 1.25;
+}
