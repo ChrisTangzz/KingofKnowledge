@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="stylesfolder\rank.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
@@ -30,12 +30,14 @@
     </tbody>
   </table>
   <button type="button" class="btn btn-danger" style="position: absolute; top: 620px; left: 482.5px; width:600px; " onclick="GoBack()">繼續遊戲</button>
+  <button type="button" class="btn btn-primary" style="position: absolute; top: 660px; left: 380.5px; width:800px; " onclick="Back()">撥放音樂</button>
   <script>
     firebase.initializeApp({
       projectId: "finalhtml"
     });
     var db = firebase.firestore();
     var ref = db.collection("rank");
+    let audioback = new Audio("audio/rank.mp3")
     let text, count = 1;
     ref.orderBy('grade', 'desc').get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
@@ -50,6 +52,11 @@
       $.cookie("restart",1);
       window.location.href = "index.html";
     }
+    function Back(){
+      audioback.play();
+    }
+  
+  
   </script>
 </body>
 

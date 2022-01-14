@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesfolder\main.css">
     <title>KingofKnowledge</title>
+    <style>
+        html {
+            zoom: .8;
+        }
+    </style>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jqueryrouter@2.2.11/dist/js/jquery.router.min.js"></script>
@@ -27,6 +32,7 @@
         let cookie = Object.keys($.cookie());
         const audiostart = new Audio("audio/start.mp3");
         const audiostop = new Audio("audio/stop.mp3");
+        const audioback = new Audio("audio/mainback.mp3");
         const audio = [];
         const subjects = ["computer", "programming", "physics", "discreteMath", "digitalLogic", "liner", "calculus"];
         $(document).ready(function () {
@@ -37,8 +43,8 @@
             if (Object.keys($.cookie()).length == 8) {
                 $("#inputnameModal").modal("show");
             }
-            else if($.cookie("restart")){
-                $.cookie("restart",0);
+            else if ($.cookie("restart")) {
+                $.cookie("restart", 0);
                 restart();
             }
             $("#restart").click(function () {
@@ -97,7 +103,7 @@
                 window.location.href = "rank.html";
             });
         }
-        function restart(){
+        function restart() {
             for (let i = 0; i < cookie.length; i++) {
                 $.removeCookie(cookie[i]);
             }
@@ -106,6 +112,9 @@
             }).then(() => {
                 location.reload();
             });
+        }
+        function Back(){
+            audioback.play();
         }
     </script>
 </head>
@@ -145,7 +154,8 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style=" zoom: 1.25; ">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style=" zoom: 1.25; ">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -159,6 +169,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="Back()">撥放音樂</button>
                 </div>
             </div>
         </div>
