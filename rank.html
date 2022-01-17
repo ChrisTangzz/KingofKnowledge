@@ -31,33 +31,7 @@
   </table>
   <button type="button" class="btn btn-danger" style="position: absolute; top: 620px; left: 482.5px; width:600px; " onclick="GoBack()">繼續遊戲</button>
   <button type="button" class="btn btn-primary" style="position: absolute; top: 660px; left: 380.5px; width:800px; " onclick="Back()">撥放音樂</button>
-  <script>
-    firebase.initializeApp({
-      projectId: "finalhtml"
-    });
-    var db = firebase.firestore();
-    var ref = db.collection("rank");
-    let audioback = new Audio("audio/rank.mp3")
-    let text, count = 1;
-    ref.orderBy('grade', 'desc').get().then(querySnapshot => {
-      querySnapshot.forEach(doc => {
-        text = $("<tr></tr>");
-        text.html("<th scope='row'>" + count + "</th>" + "<td>" + doc.id + "</td>" + "<td>" + doc.data().grade + "</td>" + "</tr>");
-        $("#person").append(text);
-        count++;
-        console.log(doc.id, doc.data());
-      });
-    });
-    function GoBack(){
-      $.cookie("restart",1);
-      window.location.href = "index.html";
-    }
-    function Back(){
-      audioback.play();
-    }
-  
-  
-  </script>
+  <script type="text/javascript" src="scriptsfolder\rank.js"></script>
 </body>
 
 </html>
