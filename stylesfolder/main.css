@@ -92,3 +92,11 @@ img {
 .modal-backdrop{
     zoom: 1.25;
 }
+
+span{
+    position: relative;
+    top: 30px;
+    left: -40px;
+    font-size: 40px;
+    color: #F75000;
+}
