@@ -93,10 +93,10 @@ img {
     zoom: 1.25;
 }
 
-span{
+#spespan{
     position: relative;
     top: 30px;
     left: -40px;
     font-size: 40px;
-    color: #F75000;
+    color: #D26900;
 }
