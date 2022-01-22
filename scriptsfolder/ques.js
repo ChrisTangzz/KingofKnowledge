@@ -24,7 +24,7 @@ var ref2 = db.collection("PersonGrade").doc("total");
 let audioback = new Audio("audio/ques.mp3");
 var point = 0;
 ref.get().then(doc => {
-    let questionObj = JSON.parse(doc.data().q1);
+    let questionObj = JSON.parse(doc.data().q1); //題目數尚未補齊，但每個難度都至少有一題
     DocumentnObj = questionObj;
     console.log("question:" + questionObj.question);
     $("#question").text(questionObj.question);
