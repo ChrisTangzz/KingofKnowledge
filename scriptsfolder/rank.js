@@ -21,3 +21,6 @@ firebase.initializeApp({
   function Back(){
     audioback.play();
   }
+  function Insert(){
+    window.location.href = "generateQuestion.html";
+  }
